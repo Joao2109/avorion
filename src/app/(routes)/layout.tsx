@@ -1,5 +1,6 @@
-import "./globals.css";
+import "../globals.css";
 import { ThemeProvider } from "../theme-provider";
+import { ThemeToggler } from "../theme-toggler";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -14,6 +15,7 @@ export default function RootLayout({
         disableTransitionOnChange
       >
         <body>{children}</body>
+        <ThemeToggler />
       </ThemeProvider>
     </html>
   );
